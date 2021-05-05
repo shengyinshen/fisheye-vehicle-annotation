@@ -50,19 +50,19 @@ Please follow the steps below to annotate your images.
 
 1. Select your image folder here. By default, the folder should be `./image_with_label` that you just have created, which contains those images after pre-processing.
 
-   ![](./.readme/1.png)
+   ![](./gallery/1.png)
 
 2. Right-click and then select "Create LineStrip"
 
-   ![](./.readme/2.png)
+   ![](./gallery/2.png)
 
 3. Consider each vehicle as a cube. Annotate the **bottom rectangle** of each of the vehicles with three vertices (Apparently, you only need three points instead of four to determine their bottom face). Choose a vehicle type from the drop-down menu ("car", "pickup", "van", "truck", "bus", "motorbike", and "others"). 
 
-   ![](C:\Users\zheng\Desktop\fisheye_image_annotation\.readme\3.png)
+   ![](./gallery/3.png)
 
 4. When you finish labeling all vehicles within the valid area, click "Next Image" to move on to the next one. Finally, all the annotations are saved as [JSON](http://www.json.org/) files in the same image directory. The following screenshot shows how your image folders will look like after annotating all images. You can reload them to check whether the annotation looks correct. 
 
-   ![](./.readme/4.png)
+   ![](./gallery/4.png)
 
 
 
