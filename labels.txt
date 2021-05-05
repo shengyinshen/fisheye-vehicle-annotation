@@ -1,0 +1,7 @@
+car
+pickup
+van
+truck
+bus
+motorbike
+others
