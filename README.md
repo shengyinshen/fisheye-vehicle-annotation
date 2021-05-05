@@ -56,11 +56,11 @@ Please follow the steps below to annotate your images.
 
    ![](./gallery/2.png)
 
-3. Consider each vehicle as a cuboid. Annotate the **bottom rectangle** of each of the vehicles with three vertices (Apparently, you only need three points instead of four to determine their bottom face). Choose a vehicle type from the drop-down menu ("car", "pickup", "van", "truck", "bus", "motorbike", and "others"). 
+3. Consider each vehicle as a cuboid. Annotate the **bottom rectangle** of each vehicle with three vertices (Apparently, you only need three points instead of four to determine their bottom face). Choose a vehicle type from the drop-down menu ("car", "pickup", "van", "truck", "bus", "motorbike", and "others"). 
 
    ![](./gallery/3.png)
 
-4. When you finish labeling all vehicles within the valid area, click "Next Image" to move on to the next one. Finally, all the annotations are saved as [JSON](http://www.json.org/) files in the same image directory. The following screenshot shows how your image folders will look like after annotating all images. You can reload them to check whether the annotation looks correct. 
+4. When you finish labeling all vehicles within the valid area, click "Next Image" to move on to the next one. The annotations will be saved automatically. Finally, all the annotations are saved as [JSON](http://www.json.org/) files in the same image directory. The following screenshot shows how your image folders will look like after annotating all images. You can reload them to check whether the annotation looks correct. 
 
    ![](./gallery/4.png)
 
