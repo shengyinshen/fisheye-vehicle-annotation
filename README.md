@@ -56,7 +56,7 @@ Please follow the steps below to annotate your images.
 
    ![](./gallery/2.png)
 
-3. Consider each vehicle as a cube. Annotate the **bottom rectangle** of each of the vehicles with three vertices (Apparently, you only need three points instead of four to determine their bottom face). Choose a vehicle type from the drop-down menu ("car", "pickup", "van", "truck", "bus", "motorbike", and "others"). 
+3. Consider each vehicle as a cuboid. Annotate the **bottom rectangle** of each of the vehicles with three vertices (Apparently, you only need three points instead of four to determine their bottom face). Choose a vehicle type from the drop-down menu ("car", "pickup", "van", "truck", "bus", "motorbike", and "others"). 
 
    ![](./gallery/3.png)
 
