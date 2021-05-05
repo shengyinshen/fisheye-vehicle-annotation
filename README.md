@@ -28,7 +28,7 @@ cd ./fisheye-image-annotation
 
 ### Pre-processing
 
-Before annotating your images, copy your images to the `./images` folder and run the following script to mark a valid area on each of them. The boundary of the valid area is marked by a big red circle. **Any on-road vehicles within that circle should be annotated**. This can help you exclude those targets that are too far away and save annotation time. 
+Before annotating your images, copy your images to the `./image` folder and run the following script to mark a valid area on each of them. The boundary of the valid area is marked by a big red circle. **Any on-road vehicles within that circle should be annotated**. This can help you exclude those targets that are too far away and save annotation time. 
 
 ```shell
 conda activate labelme
