@@ -9,6 +9,8 @@ parser.add_argument('--folder_in', type=str, default='./image', metavar='str',
                     help='folder_in: input image folder (default: ./image)')
 parser.add_argument('--folder_out', type=str, default='./image_with_label', metavar='str',
                     help='folder_out: output image folder (default: ./image_with_label)')
+parser.add_argument('--cam_loc', type=str, metavar='str',
+                    help='cam_loc: camera location from [ne, nw, se, sw]')
 parser.add_argument('--preview', action='store_true', default=False,
                     help='visualize when processing images')
 args = parser.parse_args()
@@ -16,7 +18,17 @@ args = parser.parse_args()
 
 # any vehicles within this circle should be labeled.
 # Don't modify.
-x0, y0, r = 646, 470, 465
+if args.cam_loc == 'nw':
+    x0, y0, r = 646, 470, 465
+elif args.cam_loc == 'ne':
+    x0, y0, r = 630, 482, 465
+elif args.cam_loc == 'sw':
+    x0, y0, r = None, None, None
+elif args.cam_loc == 'se':
+    x0, y0, r = None, None, None
+else:
+    raise NotImplementedError('camera location [%s] not found, pls select one from [ne, nw, se, sw]' % args.cam_loc)
+
 
 img_dirs = glob.glob(os.path.join(args.folder_in, '*.jpg')) + \
            glob.glob(os.path.join(args.folder_in, '*.png')) + \
