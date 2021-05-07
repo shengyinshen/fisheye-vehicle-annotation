@@ -13,6 +13,8 @@ parser.add_argument('--cam_loc', type=str, metavar='str',
                     help='cam_loc: camera location from [ne, nw, se, sw]')
 parser.add_argument('--preview', action='store_true', default=False,
                     help='visualize when processing images')
+parser.add_argument('--bgr2rgb', action='store_true', default=False,
+                    help='images channels convert from bgr to rgb')
 args = parser.parse_args()
 
 
@@ -23,9 +25,9 @@ if args.cam_loc == 'nw':
 elif args.cam_loc == 'ne':
     x0, y0, r = 630, 482, 465
 elif args.cam_loc == 'sw':
-    x0, y0, r = None, None, None
+    x0, y0, r = None, None, None # todo
 elif args.cam_loc == 'se':
-    x0, y0, r = None, None, None
+    x0, y0, r = None, None, None # todo
 else:
     raise NotImplementedError('camera location [%s] not found, pls select one from [ne, nw, se, sw]' % args.cam_loc)
 
@@ -42,6 +44,8 @@ for i in range(len(img_dirs)):
 
     # read an image
     img = cv2.imread(img_dirs[i], cv2.IMREAD_COLOR)
+    if args.bgr2rgb:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     # draw a circle and save image to disk
     cv2.circle(img, center=(x0, y0), radius=r, color=(0, 0, 255),
                thickness=1, lineType=cv2.LINE_AA)

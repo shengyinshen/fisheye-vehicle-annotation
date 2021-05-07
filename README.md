@@ -32,7 +32,7 @@ Before annotating your images, copy your images to the `./image` folder and run 
 
 ```shell
 conda activate labelme
-python preproc.py --folder_in ./image --folder_out ./image_with_label --preview
+python preproc.py --folder_in ./image --folder_out ./image_with_label --preview --cam_loc ne --bgr2rgb
 ```
 
 After the pre-processing, you can find your processed images in the folder `./image_with_label` .
@@ -56,11 +56,11 @@ Please follow the steps below to annotate your images.
 
    ![](./gallery/2.png)
 
-3. Consider each vehicle as a cuboid. Annotate the **bottom rectangle** of each vehicle with three vertices (Apparently, you only need three points instead of four to determine their bottom face). Choose a vehicle type from the drop-down menu ("car", "pickup", "van", "truck", "bus", "motorbike", and "others"). 
+3. Consider each vehicle as a cuboid. Annotate the **bottom rectangle** of each vehicle with three vertices (Apparently, you only need three points instead of four to determine their bottom face). Choose a vehicle type from the drop-down menu ("car", "pickup", "van", "truck", "bus", "motorbike", and "others"). **Any on-road vehicles within the red circle should be annotated**. 
 
    ![](./gallery/3.png)
 
-4. When you finish labeling all vehicles within the valid area, click "Next Image" to move on to the next one. The annotations will be saved automatically. Finally, all the annotations are saved as [JSON](http://www.json.org/) files in the same image directory. The following screenshot shows how your image folders will look like after annotating all images. You can reload them to check whether the annotation looks correct. 
+4. When you finish labeling all vehicles within the valid area, click "Next Image" to move on to the next. The annotations will be saved automatically. Finally, all the annotations are saved as [JSON](http://www.json.org/) files in the same image directory. The following screenshot shows how your image folders will look like after annotating all images. You can reload them to check whether the annotation looks correct. 
 
    ![](./gallery/4.png)
 
@@ -72,7 +72,7 @@ Please follow the steps below to annotate your images.
 2. When labeling the bottom rectangle of each vehicle, the order of the three vertices doesn't matter. You may either start from a vehicle's head then goes to its tail, or do it in the opposite way. 
 3. If a vehicle is too small, you can use "Ctrl + scroll wheel" to zoom-in and zoom-out.
 4. If you accidentally mislabeled any of the vehicles, try right-click --> "Edit Polygons" and "Edit Label" to correct them.
-5. Sometimes it is hard to find the exact location of the vertices especially when the vehicles are too far away from the camera. Then, don't worry. If there are errors, just let them be.  Such errors are acceptable, and the deep neural network will learn to tolerate them during the training process.
-6. Sometimes there could be bottom vertices that may have the same pixel location. If they do, you can either mark twice the same pixel location or makes a minor shift of your cursor on labeling them. 
+5. Sometimes it is hard to find the exact location of the vertices particularly when the vehicles are too far away from the camera. Then, don't worry. If there are errors, just let them be.  Such errors are acceptable, and the deep neural network will learn to tolerate them during the training process.
+6. Sometimes the bottom vertices may even have the same pixel location. If they do, you can either mark them with the same pixel location or makes a minor shift of your cursor when labeling them. 
 7. The category label "others" refers to those special vehicles such as agricultural vehicles, bulldozers, cranes, etc.
 8. If you have any further questions, please contact Dr. Zhengxia Zou (zzhengxi@umich.edu).
