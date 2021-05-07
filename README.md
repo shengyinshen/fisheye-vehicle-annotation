@@ -66,7 +66,7 @@ Please follow the steps below to annotate your images.
 
 
 
-## Things to know
+## Important things to know
 
 1. Any on-road vehicles within the red circle should be annotated. The vehicles located in parking lots should be ignored, even within the circle. All the vehicles outside the circle should be ignored. 
 2. When labeling the bottom rectangle of each vehicle, the order of the three vertices doesn't matter. You may either start from a vehicle's head then goes to its tail, or do it in the opposite way. 
