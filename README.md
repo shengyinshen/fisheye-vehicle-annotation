@@ -26,17 +26,6 @@ cd ./fisheye-image-annotation
 
 ## Usage
 
-### Pre-processing
-
-Before annotating your images, copy your images to the `./image` folder and run the following script to mark a valid area on each of them. The boundary of the valid area is marked by a big red circle. **Any on-road vehicles within that circle should be annotated**. This can help you exclude those targets that are too far away and save annotation time. 
-
-```shell
-conda activate labelme
-python preproc.py --folder_in ./image --folder_out ./image_with_label --preview --cam_loc ne --bgr2rgb
-```
-
-After the pre-processing, you can find your processed images in the folder `./image_with_label` .
-
 ### Annotation
 
 Activate anaconda environment and open the Labelme software interface:
@@ -48,7 +37,7 @@ labelme --labels labels.txt --nodata --autosave
 
 Please follow the steps below to annotate your images.
 
-1. Select your image folder here. By default, the folder should be `./image_with_label` that you just have created, which contains those images after pre-processing.
+1. Select your image folder here. By default, the folder should be `./image_with_label`, which contains those images to be annotated.
 
    ![](./gallery/1.png)
 
@@ -72,7 +61,7 @@ Please follow the steps below to annotate your images.
 2. When labeling the bottom rectangle of each vehicle, the order of the three vertices doesn't matter. You may either start from a vehicle's head then goes to its tail, or do it in the opposite way. 
 3. If a vehicle is too small, you can use "Ctrl + scroll wheel" to zoom-in and zoom-out.
 4. If you accidentally mislabeled any of the vehicles, try right-click --> "Edit Polygons" and "Edit Label" to correct them.
-5. Sometimes it is hard to find the exact location of the vertices particularly when the vehicles are too far away from the camera. Then, don't worry. If there are errors, just let them be.  Such errors are acceptable, and the deep neural network will learn to tolerate them during the training process.
-6. Sometimes the bottom vertices may even have the same pixel location. If they do, you can either mark them with the same pixel location or makes a minor shift of your cursor when labeling them. 
-7. The category label "others" refers to those special vehicles such as agricultural vehicles, bulldozers, cranes, etc.
-8. If you have any further questions, please contact Dr. Zhengxia Zou (zzhengxi@umich.edu).
+5. Sometimes the bottom vertices may even have the same pixel location. If they do, you can either mark them with the same pixel location or makes a minor shift of your cursor when labeling them. 
+6. The category label "others" refers to those special vehicles such as agricultural vehicles, bulldozers, cranes, etc.
+7. For those pickup trucks with trailers, they should be separately annotated as two vehilces, i.e., three vertices for each of them. You can select the type of the trailer as "others" since it doesn't belong to any of the rest categories.
+8. If you have any further questions, please contact Sean (shengyin@umich.edu) or Zhengxia (zzhengxi@umich.edu).
