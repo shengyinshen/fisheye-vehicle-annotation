@@ -31,6 +31,7 @@ cd ./fisheye-image-annotation
 Activate anaconda environment and open the Labelme software interface:
 
 ```shell
+cd ./fisheye-image-annotation
 conda activate labelme
 labelme --labels labels.txt --nodata --autosave
 ```
