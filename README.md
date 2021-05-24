@@ -1,4 +1,4 @@
-# Fisheye Image Annotation Tutorial
+# Fisheye Image Vehicle Annotation Tutorial
 
 [Michigan Traffic Lab, University of Michigan](https://traffic.engin.umich.edu/)
 
