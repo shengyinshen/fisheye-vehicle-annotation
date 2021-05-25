@@ -16,8 +16,7 @@ conda activate labelme
 pip install labelme
 pip install opencv-python
 ```
-Install git first if it has not been installed:
-Clone this repo:
+Install git first if it has not been installed. And then clone this repo:
 
 ```shell
 git clone https://github.com/shengyinshen/isheye-vehicle-annotation.git 
