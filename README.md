@@ -16,7 +16,7 @@ conda activate labelme
 pip install labelme
 pip install opencv-python
 ```
-
+Install git first if it has not been installed:
 Clone this repo:
 
 ```shell
