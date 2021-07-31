@@ -8,7 +8,7 @@ This repo provides a toolbox for image annotation. It also provides a brief tuto
 
 ## Installation
 
-Install [Anaconda](https://www.continuum.io/downloads) first, then run below to install [Labelme](https://github.com/wkentaro/labelme) and [opencv-python](https://pypi.org/project/opencv-python/):
+Install [Anaconda](https://www.anaconda.com/products/individual) first, then run below to install [Labelme](https://github.com/wkentaro/labelme) and [opencv-python](https://pypi.org/project/opencv-python/):
 
 ```shell
 conda create --name=labelme python=3.6
@@ -16,7 +16,7 @@ conda activate labelme
 pip install labelme
 pip install opencv-python
 ```
-Install git first if it has not been installed. And then clone this repo:
+Install [git](https://git-scm.com/downloads) first if it has not been installed. And then clone this repo:
 
 ```shell
 git clone https://github.com/shengyinshen/fisheye-vehicle-annotation.git 
